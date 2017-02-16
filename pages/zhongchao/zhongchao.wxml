@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<view class="header">
+  <view class='header-select' bindtap="firstTab">赛程</view>
+  <view class='header-select' bindtap="secondTab">积分榜</view>
+  <view class='header-select' bindtap="thirdTab">射手榜</view>
+</view>
+<view wx:if="{{tag == 'saicheng'}}">
+  <view class='saicheng-tab'>
+    <view class="saicheng-name {{ isFirst? 'selected': ''}}" bindtap="firstSaicheng">{{tabs.saicheng1}}</view>
+    <view class="saicheng-name {{ !isFirst? 'selected': '' }}" bindtap="secondSaicheng">{{tabs.saicheng2}}</view>
+  </view>
+  <scroll-view>
+    <view wx:for="{{saicheng}}"  class="match-detail">
+      <view class="header-sacheng">
+        <text class="date">{{item.c2}}</text>
+        <text class="time">{{item.c3}}</text>
+        <text class="status">{{item.c1}}</text>
+      </view>
+      <view class="single-detail">
+        <view class="team">
+          <image></image>
+          <text>{{item.c4T1}}</text>
+        </view>
+        <view class="score-video">
+            <text class="score">{{item.c4R}}</text>
+            <text class="video">{{item.c51}}</text>
+        </view>
+        <view class="team">
+        <image></image>
+          <text>{{item.c4T2}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+  <view wx-if="{{tag == 'jifenbang'}}" class="jifenbang">
+    <scroll-view wx:if="{{jifenbang}}">
+      <view class="detail">
+        <text class="per1">名次</text>
+        <text class="per2">球队名</text>
+        <text class="per1">场次</text>
+        <text class="per1">胜</text>
+        <text class="per1">平</text>
+        <text class="per1">负</text>
+        <text class="per2">净胜球</text>
+        <text class="per1">积分</text>
+      </view>
+      <view wx:for="{{jifenbang}}" class="detail">
+        <text class="per1">{{item.c1}}</text>
+        <text class="per2">{{item.c2}}</text>
+        <text class="per1">{{item.c3}}</text>
+        <text class="per1">{{item.c41}}</text>
+        <text class="per1">{{item.c42}}</text>
+        <text class="per1">{{item.c43}}</text>
+        <text class="per2">{{item.c5}}</text>
+        <text class="per1">{{item.c6}}</text>
+      </view>
+    </scroll-view>
+    <text wx:if="{{!jifenbang}}">暂无数据</text>
+</view>
+
+<view wx-if="{{tag == 'sheshoubang'}}" class="jifenbang">
+    <scroll-view wx:if="{{sheshoubang}}">
+      <view class="detail">
+        <text class="per2">名次</text>
+        <text class="per2">球员</text>
+        <text class="per2">球队</text>
+        <text class="per2">进球</text>
+        <text class="per2">点球</text>
+      </view>
+      <view wx:for="{{sheshoubang}}" class="detail">
+        <text class="per2">{{item.c1}}</text>
+        <text class="per2">{{item.c2}}</text>
+        <text class="per2">{{item.c3}}</text>
+        <text class="per2">{{item.c4}}</text>
+        <text class="per2">{{item.c5}}</text>
+      </view>
+    </scroll-view>
+    <text wx:if="{{!sheshoubang}}">暂无数据</text>
+</view>
+

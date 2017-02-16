@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/zhongchao/zhongchao",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh": true
+  }
+}

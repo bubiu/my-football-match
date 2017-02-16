@@ -1,0 +1,126 @@
+/**index.wxss**/
+page{
+  width: 100%;
+}
+.header{
+  font-size: 0;
+  height: 2rem;
+  border-bottom: #eee 1px solid;
+
+}
+.header .header-select{
+  display: inline-block;
+  width: 33%;
+  height: inherit;
+  line-height: 2rem;
+  text-align: center;
+  border-right:#eee 1px solid;
+  font-size: 0.75rem;
+  
+}
+.header-select:last-child{
+  border: none;
+}
+.saicheng-tab{
+  width: 100%;
+  font-size: 0.6rem;
+  border-bottom: #eee 1px solid;
+}
+.saicheng-tab .saicheng-name{
+  width: 49.5%;
+  display: inline-block;
+  border-right:#eee 1px solid;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+
+}
+.saicheng-tab .selected{
+background: green;
+border-radius: 0.2rem;
+color: #fff;
+
+}
+.saicheng-name:last-child{
+  border: none;
+}
+.match-detail{
+  width: 100%;
+  padding: 0.3rem;
+  border-bottom: #eee 1px solid;
+  font-size: 0.6rem;
+
+}
+.header-sacheng{
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+}
+.header-sacheng .status{
+  float: right;
+  margin-right: 2rem
+}
+.header-sacheng .time{
+  margin-left: 6rem;
+  font-size: 0.65rem;
+  color: #000
+}
+.single-detail{
+  width: 100%;
+  height: 4rem;
+  padding-top:0.5rem;
+}
+.single-detail view{
+  display: inline-block;
+  width: 33%;
+  text-align: center
+}
+.score-video{
+  height: 3rem;
+  }
+view .score{
+  width: 100%;
+  height: 2rem;
+  display: block;
+  text-align: center;
+  font-size:1rem;
+}
+.team{
+  width: 3rem;
+  height: 3rem;
+}
+.team image{
+  width: 2rem;
+  height: 2rem;
+  background: url('../../img/temp.png')center no-repeat;
+  background-size: contain;
+}
+.team text{
+  display: block;
+  margin-top: 0.5rem;
+}
+/*积分榜样式*/
+.jifenbang{
+  width: 100%;
+  margin-top:0.5rem; 
+  padding: 0;
+  font-size: 0.6rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.jifenbang .detail{
+  border-bottom: #eee 1px solid;
+}
+.jifenbang .detail:last-child{
+  border:none;
+}
+
+.jifenbang .per1{
+  display: inline-block;
+  width: 10%;
+}
+.jifenbang .per2{
+  display: inline-block;
+  width: 20%;
+}
