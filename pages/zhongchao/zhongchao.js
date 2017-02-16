@@ -15,7 +15,7 @@ Page({
     onLoad: function (){
         var that = this;
         wx.request({
-          url: url + '?key=' + key + '&league=德甲',
+          url: url + '?key=' + key + '&league=中超',
           data: {},
           method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
           header: { 
